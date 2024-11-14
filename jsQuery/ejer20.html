@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 20 - Efectos show/hide</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .bloque {
+            padding: 20px;
+            margin: 10px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div id="bloque1" class="bloque">
+        <p>Este es el primer bloque de texto.</p>
+        <p>Haz clic aquí para ver el cambio.</p>
+        <p>El bloque desaparecerá lentamente.</p>
+    </div>
+
+    <div id="bloque2" class="bloque" style="display:none;">
+        <p>Este es el segundo bloque de texto.</p>
+        <p>Apareció después de que el primero se ocultó.</p>
+        <p>Haz clic nuevamente para volver al primero.</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".bloque").click(function(){
+                let bloqueActual = $(this);
+                let otroBloque = bloqueActual.is("#bloque1") ? $("#bloque2") : $("#bloque1");
+                
+                bloqueActual.hide("slow", function(){
+                    otroBloque.show("slow");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

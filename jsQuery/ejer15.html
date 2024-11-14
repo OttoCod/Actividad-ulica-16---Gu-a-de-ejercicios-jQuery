@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 15 - Mouse Down and Up</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        button {
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button>Button 1</button>
+    <button>Button 2</button>
+
+    <script>
+        $(document).ready(function() {
+            $('button').mousedown(function() {
+                $(this).css('background-color', 'yellow');
+            });
+            
+            $('button').mouseup(function() {
+                $(this).css('background-color', '');
+            });
+        });
+    </script>
+</body>
+</html>

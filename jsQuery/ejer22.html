@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 22 - Efecto fadeTo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .bloque {
+            padding: 20px;
+            margin: 10px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div id="bloque1" class="bloque">
+        <p>Este es el primer bloque de texto.</p>
+        <p>Haz clic aquí para reducir la opacidad.</p>
+        <p>El bloque se volverá semi-transparente.</p>
+    </div>
+
+    <div id="bloque2" class="bloque" style="display:none;">
+        <p>Este es el segundo bloque de texto.</p>
+        <p>Apareció después de que el primero cambió su opacidad.</p>
+        <p>Haz clic nuevamente para volver al primero.</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".bloque").click(function(){
+                let bloqueActual = $(this);
+                let otroBloque = bloqueActual.is("#bloque1") ? $("#bloque2") : $("#bloque1");
+                
+                bloqueActual.fadeTo("slow", 0.2, function(){
+                    otroBloque.fadeIn("slow");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

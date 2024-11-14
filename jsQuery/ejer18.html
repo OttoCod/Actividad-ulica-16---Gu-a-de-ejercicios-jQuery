@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 18 - Evento blur</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <form>
+        <label for="texto">Ingrese texto:</label>
+        <input type="text" id="texto" name="texto">
+    </form>
+
+    <script>
+        $(document).ready(function(){
+            $("#texto").blur(function(){
+                let x = $(this);
+                let cadena = x.val();
+                if (cadena.length == 0) {
+                    alert("No ingresó datos");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

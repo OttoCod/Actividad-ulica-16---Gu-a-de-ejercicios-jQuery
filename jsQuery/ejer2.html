@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 2 - jQuery Paragraph Click</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <p id="first">First paragraph - Click me!</p>
+    <p id="second">Second paragraph - I won't respond</p>
+
+    <script>
+        $(document).ready(function() {
+            $("#first").click(function() {
+                alert("First paragraph clicked!");
+            });
+        });
+    </script>
+</body>
+</html>

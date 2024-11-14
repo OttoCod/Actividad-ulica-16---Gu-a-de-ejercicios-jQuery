@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 24 - Iteración each</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .resaltado {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Lista de enlaces</h2>
+    <ul>
+        <li><a href="http://www.google.com.ar">Google Argentina</a></li>
+        <li><a href="http://www.facebook.com">Facebook</a></li>
+        <li><a href="http://www.unlam.edu.ar">UNLaM</a></li>
+        <li><a href="http://www.twitter.com.ar">Twitter Argentina</a></li>
+        <li><a href="http://www.github.com">GitHub</a></li>
+    </ul>
+
+    <script>
+        $(document).ready(function(){
+            $("a").each(function(){
+                let enlace = $(this).attr("href");
+                if (enlace.indexOf(".ar") !== -1) {
+                    $(this).addClass("resaltado");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

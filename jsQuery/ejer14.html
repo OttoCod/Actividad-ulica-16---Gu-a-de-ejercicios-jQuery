@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 14 - Mouse Move</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 20px;
+        }
+        #coords {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <div id="coords">Mouse coordinates will appear here</div>
+
+    <script>
+        $(document).ready(function() {
+            $('#box').mousemove(function(event) {
+                $('#coords').text('X: ' + event.pageX + ' Y: ' + event.pageY);
+            });
+
+            $('#box').mouseout(function() {
+                $('#coords').text('Mouse is outside the box');
+            });
+        });
+    </script>
+</body>
+</html>

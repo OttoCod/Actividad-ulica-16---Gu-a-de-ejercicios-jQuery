@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 8 - Attr Methods</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <a href="" id="link">Click a button to set link</a><br><br>
+    
+    <button onclick="setGoogle()">Set Google</button>
+    <button onclick="setMicrosoft()">Set Microsoft</button>
+    <button onclick="setApple()">Set Apple</button>
+
+    <script>
+        function setGoogle() {
+            $('#link').attr('href', 'https://www.google.com')
+                     .text('Go to Google');
+        }
+        
+        function setMicrosoft() {
+            $('#link').attr('href', 'https://www.microsoft.com')
+                     .text('Go to Microsoft');
+        }
+        
+        function setApple() {
+            $('#link').attr('href', 'https://www.apple.com')
+                     .text('Go to Apple');
+        }
+    </script>
+</body>
+</html>

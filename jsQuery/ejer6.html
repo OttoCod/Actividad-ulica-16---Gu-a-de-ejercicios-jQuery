@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 6 - News Font Size</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .news1, .news2, .news3 {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>First News</h2>
+    <div class="news1">First news content here...</div>
+
+    <h2>Second News</h2>
+    <div class="news2">Second news content here...</div>
+
+    <h2>Third News</h2>
+    <div class="news3">Third news content here...</div>
+
+    <button onclick="changeSize('news1')">Change Size News 1</button>
+    <button onclick="changeSize('news2')">Change Size News 2</button>
+    <button onclick="changeSize('news3')">Change Size News 3</button>
+
+    <script>
+        function changeSize(className) {
+            $('.' + className).css('font-size', '24px');
+        }
+    </script>
+</body>
+</html>
